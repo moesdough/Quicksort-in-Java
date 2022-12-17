@@ -2,7 +2,7 @@ package submission;
 import java.util.ArrayList;
 import java.util.List;
 public class QuickSortNotInPlace {
-public static List<Integer> sort(List<Integer> list) {
+public static List<Integer> sortQuick(List<Integer> list) {
     if (list.size() <= 1) {
         return list;
     }
@@ -22,9 +22,9 @@ public static List<Integer> sort(List<Integer> list) {
         }
     }
 
-    List<Integer> sorted = sort(lesser);
+    List<Integer> sorted = sortQuick(lesser);
     sorted.addAll(equal);
-    sorted.addAll(sort(greater));
+    sorted.addAll(sortQuick(greater));
 
     return sorted;
          }
